@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month day count</title>
+</head>
+<body>
+    <script>
+        
+        console.log("Press any month number for know their days.")
+        console.log("<br>Press 1 for January .")
+        console.log("<br>Press 2 for Fabruary .")
+        console.log("<br>Press 3 for March . . .")
+        console.log("<br>Press 4 for April . . .")
+        console.log("<br>Press 5 for May . . .")
+        console.log("<br>Press 6 for June . . .")
+        console.log("<br>Press 7 for July . . .")
+        console.log("<br>Press 8 for Augast . . .")
+        console.log("<br>Press 9 for September . . .")
+        console.log("<br>Press 10 for October . . .")
+        console.log("<br>Press 11 for November . . .")
+        console.log("<br>Press 12 for December . ")
+        let choice = parseInt(prompt("Enter the month here :"))
+
+        switch (choice) {
+
+            case 1:
+                console.log("January has 31 days");
+                break;
+
+            case 2:
+                console.log("fabruary has 28 or 29 days");
+                break;
+
+            case 3:
+                console.log("march has 31 days");
+                break;
+
+            case 4:
+                console.log("april has 30 days");
+                break;
+
+            case 5:
+                console.log("may has 31 days");
+                break;
+
+            case 6:
+                console.log("june has 30 days");
+                break;
+
+            case 7:
+                console.log("july has 31 days");
+                break;
+
+            case 8:
+                console.log("augast has 31 days");
+                break;
+
+            case 9:
+                console.log("september has 30 days");
+                break;
+
+            case 10:
+                console.log("october has 31 days");
+                break;
+
+            case 11:
+                console.log("november has 30 days" );
+                break;
+
+            case 12:
+                console.log("december has 31 days");
+                break;
+
+            default:
+                console.log("Please enter a valid month number")
+                break;
+        }
+
+    </script>
+</body>
+</html>

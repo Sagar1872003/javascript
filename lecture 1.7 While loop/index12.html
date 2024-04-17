@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum odd</title>
+</head>
+<body>
+    
+    <script>
+        let n = 1;
+        let sum = 0;
+        let a = parseInt(prompt("Enter Your Number for print value : "));
+
+        while (n <= a) { 
+           if(n%2==0){
+            console.log(n); 
+            sum += n;        
+             
+           }  
+           n++;       
+        }
+
+        console.log("Sum of all even elements: "+ sum);
+    </script>
+</body>
+</html>

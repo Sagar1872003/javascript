@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket price according to Your age</title>
+</head>
+<body>
+    <!-- Write a program that calculates the ticket price based on age with the following conditions: age below 12 pay a ticket price of 5, age below 18 pay a ticket price of 10, age below 60 pay a ticket price of 20, age over 60 play a ticket price of 15. -->
+    <script>
+        let age=parseInt(prompt("Enter your age :"));
+        if(age>=5 && age<=12){
+            console.log("Your ticket price is 5 rupee")
+        }
+        else if(age>12 && age<=18){
+            console.log("Your ticket price is 10 rupee")
+        }
+        else if(age>18 && age<=60){
+            console.log("Your ticket price is 20 rupee")
+        }
+        else if(age>60) {
+            console.log("Your ticket price is 15 rupee")
+        }
+        else{
+            console.log("Enter valid age")
+        }
+    </script>
+    
+</body>
+</html>

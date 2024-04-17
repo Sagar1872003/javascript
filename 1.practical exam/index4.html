@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let baseSalary = parseFloat(prompt("Enter your base salary:"));
+
+        let hra = baseSalary * 0.10;
+        let da = baseSalary * 0.05;
+        let ta = baseSalary * 0.08;
+
+        let grossSalary = baseSalary + hra + da + ta;
+
+        document.write("the hra is" + hra + "</br>");
+        document.write("the hra is" + da + "</br>");
+        document.write("the hra is" + ta + "</br>");
+        document.write("the gross salary is: " + grossSalary + "</br>");
+    </script>
+
+</body>
+
+</html>

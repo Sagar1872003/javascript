@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade</title>
+</head>
+
+<body>
+    <script>
+        let Marks = parseInt(prompt("Enter the Marks of Student:"));
+
+        if (Marks <= 32) {
+            console.log("You are fail.");
+        } else if (Marks >= 33 && Marks <= 39) {
+            console.log("Good..You get D grade");
+        } else if (Marks >= 40 && Marks <= 60) {
+            console.log("Very Good..You get C grade");
+        } else if (Marks >= 61 && Marks <= 80) {
+            console.log("Excellent..You get B grade");
+        } else if (Marks >= 81 && Marks <= 100) {
+            console.log("Outstanding..You get A grade");
+        } else {
+            console.log("Invalid input. Please enter marks between 0 and 100.");
+        }
+    </script>
+</body>
+
+</html>
