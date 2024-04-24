@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: darkslategray;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <table width="300px">
+        <tr height="60px">
+            <td width="75%" colspan="3">
+                <input type="text" name="display" id="display">
+            </td>
+            <td width="25%">
+                <input type="button" value="C" onclick="displayclear()">
+            </td>
+        </tr>
+        <tr height="40px">
+            <td width="25%">
+                <input type="button" value="1" onclick="addToDisplay('1')">
+            </td>
+            <td width="25%">
+                <input type="button" value="2" onclick="addToDisplay('2')">
+            </td>
+            <td width="25%">
+                <input type="button" value="3" onclick="addToDisplay('3')">
+            </td>
+            <td width="25%">
+                <input type="button" value="/" onclick="addToDisplay('/')">
+            </td>
+        </tr>
+        <tr height="40px">
+            <td width="25%">
+                <input type="button" value="4" onclick="addToDisplay('4')">
+            </td>
+            <td width="25%">
+                <input type="button" value="5" onclick="addToDisplay('5')">
+            </td>
+            <td width="25%">
+                <input type="button" value="6" onclick="addToDisplay('6')">
+            </td>
+            <td width="25%">
+                <input type="button" value="*" onclick="addToDisplay('*')">
+            </td>
+        </tr>
+        <tr height="40px">
+            <td width="25%">
+                <input type="button" value="7" onclick="addToDisplay('7')">
+            </td>
+            <td width="25%">
+                <input type="button" value="8" onclick="addToDisplay('8')">
+            </td>
+            <td width="25%">
+                <input type="button" value="9" onclick="addToDisplay('9')">
+            </td>
+            <td width="25%">
+                <input type="button" value="-" onclick="addToDisplay('-')">
+            </td>
+        </tr>
+        <tr height="40px">
+            <td width="25%">
+                <input type="button" value="0" onclick="addToDisplay('0')">
+            </td>
+            <td width="25%">
+                <input type="button" value="00" onclick="addToDisplay('00')">
+            </td>
+            <td width="25%">
+                <input type="button" value="+" onclick="addToDisplay('+')">
+            </td>
+            <td width="25%">
+                <input type="button" value="=" onclick="calc()" class="eval">
+            </td>
+        </tr>
+        
+    </table>
+</body>
+<script>
+    function addToDisplay(value){
+        var display=document.getElementById('display');
+        display.value+=value;
+    }
+    function displayclear(){
+        var display=document.getElementById('display')
+        display.value = '';
+    }
+    function calc(){
+        var display=document.getElementById('display');
+        display.value=eval(display.value);
+    }
+</script>
+</html>
