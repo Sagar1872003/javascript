@@ -1,0 +1,58 @@
+<script>
+class Student {
+  constructor(physics, chemistry, biology, mathematics, computer) {
+    this.physics = physics;
+    this.chemistry = chemistry;
+    this.biology = biology;
+    this.mathematics = mathematics;
+    this.computer = computer;
+  }
+
+  calculatePercentage() {
+    const totalMarks = this.physics + this.chemistry + this.biology + this.mathematics + this.computer;
+    const percentage = (totalMarks / 500) * 100;
+    return percentage;
+  }
+
+  getGrade() {
+    const percentage = this.calculatePercentage();
+
+    if (percentage >= 90) {
+      return 'A';
+    } else if (percentage >= 80) {
+      return 'B';
+    } else if (percentage >= 70) {
+      return 'C';
+    } else if (percentage >= 60) {
+      return 'D';
+    } else if (percentage >= 50) {
+      return 'E';
+    } else {
+      return 'F';
+    }
+  }
+}
+
+function main() {
+  const physics = parseInt(prompt("Enter Physics marks (out of 100): "));
+  const chemistry = parseInt(prompt("Enter Chemistry marks (out of 100): "));
+  const biology = parseInt(prompt("Enter Biology marks (out of 100): "));
+  const mathematics = parseInt(prompt("Enter Mathematics marks (out of 100): "));
+  const computer = parseInt(prompt("Enter Computer marks (out of 100): "));
+
+  if (isNaN(physics) || isNaN(chemistry) || isNaN(biology) || isNaN(mathematics) || isNaN(computer)) {
+    alert("Invalid input. Please enter numerical marks only.");
+    return;
+  }
+
+  const student = new Student(physics, chemistry, biology, mathematics, computer);
+  const percentage = student.calculatePercentage();
+  const grade = student.getGrade();
+
+  alert(`Percentage: ${percentage.toFixed(2)}%`);
+  alert(`Grade: ${grade}`);
+}
+
+main();
+
+</script>

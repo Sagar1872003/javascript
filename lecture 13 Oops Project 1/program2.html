@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>People Information</h1>
+  <table id="myTable" border="1">
+    </table>
+</body>
+<script>
+
+function Person(name, email, phone) {
+  this.name = name;
+  this.email = email;
+  this.phone = phone;
+
+  this.toTableRow = function() {
+    const row = document.createElement('tr');
+    const cell1 = row.insertCell();
+    cell1.textContent = this.name;
+    const cell2 = row.insertCell();
+    cell2.textContent = this.email;
+    const cell3 = row.insertCell();
+    cell3.textContent = this.phone;
+    return row;
+  };
+}
+
+function generateTable(data) {
+
+  const table = document.getElementById('myTable');
+
+  table.innerHTML = '';
+
+
+  const headerRow = table.insertRow();
+  const headerCells = ['Name', 'Email', 'Phone'];
+  for (const headerCell of headerCells) {
+    const cell = headerRow.insertCell();
+    cell.textContent = headerCell;
+    cell.style.fontWeight = 'bold'; 
+  }
+
+ 
+  for (const person of data) {
+    const personRow = person.toTableRow();
+    table.appendChild(personRow);
+  }
+}
+
+const people = [
+  new Person('Jay', 'jay@gmail.com', '12345'),
+  new Person('Ajay', 'ajay@gmail.com', '12345'),
+  new Person('Vijay', 'vijay@gmail.com', '12345'),
+  new Person('Ashish', 'ashish@gmail.com', '12345'),
+];
+
+generateTable(people);
+
+</script>
+</html>

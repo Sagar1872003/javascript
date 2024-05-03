@@ -1,0 +1,22 @@
+<script>
+    class MultiplicationTable {
+  constructor(number) {
+    this.number = number;
+  }
+
+  printTable() {
+    let i = 1;
+    do {
+      console.log(`${this.number} * ${i} = ${this.number * i}`);
+      i++;
+    } while (i <= 10);
+  }
+}
+
+const number = parseInt(prompt("Enter a number: "));
+
+const table = new MultiplicationTable(number);
+
+table.printTable();
+
+</script>

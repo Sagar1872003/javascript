@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: grey;
+            font-family: 'Lato';
+            text-align: center;
+            background: #66cc99;
+            margin: 30px;
+        }
+
+        h1 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-container {
+            text-align: left;
+            background: white;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        label {
+            color: #66cc99;
+            text-transform: uppercase;
+        }
+
+        input {
+            background: transparent;
+            font-size: 14px;
+            display: block;
+            padding: 10px 30px 10px 5px;
+            margin: 10px 0 40px;
+            border: 2px solid white;
+            border-bottom: 2px solid grey;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 2px solid #66cc99;
+            ;
+        }
+
+        .radio-question input {
+            margin: 10px;
+            padding: 0;
+        }
+
+        .radio-input {
+            display: inline;
+        }
+
+        .button {
+            background: #66cc99;
+            border: 0;
+            padding: 15px 30px;
+            margin-top: 20px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .button:hover {
+            background: #5ec190;
+        }
+
+        .password-rules {
+            font-size: 10px;
+            margin-top: -20px;
+            margin-bottom: 40px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -30px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <div class="form-container">
+        <form name="registerForm">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" required />
+            <p class="error-message"></p>
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" placeholder="Doe" required />
+            <p class="error-message"></p>
+            <label for="e-mail">E-mail address *</label>
+            <input type="text" id="e-mail" placeholder="john-doe@net.com" required />
+            <p class="error-message"></p>
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" maxlength="9" pattern=".{9,}" required title="9 characters length"
+                placeholder="223587972" />
+            <p class="error-message"></p>
+            <label for="country">Country</label>
+            <input type="text" id="country" placeholder="United Kingdom" />
+            <p class="error-message"></p>
+            <label for="password">Password *</label>
+            <input type="password" id="password" pattern=".{8,}" required title="8 characters minimum" />
+            <p class="error-message"></p>
+            <p class="password-rules">Your password should contain at least 8 characters and 1 number.</p>
+            <div class="radio-question">
+                <p>Where did you find out about us?</p>
+                <form>
+                    <input class="radio-input" type="radio" name="media" value="TV" /> TV <br>
+                    <input class="radio-input" type="radio" name="media" value="radio" /> Radio <br>
+                    <input class="radio-input" type="radio" name="media" value="internet" /> Internet <br>
+                    <input class="radio-input" type="radio" name="media" value="newspaper" /> Newspaper <br>
+                    <input class="radio-input" type="radio" name="media" value="recommend" /> Recommendation <br>
+            </div>
+            <input class="button" type="submit" value="submit" name="submit" onClick="formValidation()" />
+        </form>
+    </div>
+
+</body>
+<script>
+    function formValidation() {
+        var fname = document.getElementById('firstName').value;
+        var lname = document.getElementById('lastName').value;
+        var pnumber = document.getElementById('phoneNumber').value;
+        var country = document.getElementById('country').value;
+        var email = document.getElementById('e-mail').value;
+        var password = document.getElementById('password').value;
+        var text = "";
+
+        if (FirstName(fname)) {
+        }
+        if (LastName(lname)) {
+        }
+        if (PhoneNumber(pnumber)) {
+        }
+        if (Country(country)) {
+        }
+        if (Email(email)) {
+        }
+        if (Password(password)) {
+        }
+        return false;
+    }
+
+    /*first name input validation*/
+    function FirstName(fname) {
+        var message = document.getElementsByClassName("error-message");
+        var letters = /^[A-Za-z]+$/;
+        if (fname == "" || fname.match(letters)) {
+            text = "";
+            message[0].innerHTML = text;
+            return true;
+        }
+
+        else {
+            text = "First name should contain only letters";
+            message[0].innerHTML = text;
+            return false;
+        }
+    }
+
+    /*last name input validation*/
+    function LastName(lname) {
+        var message = document.getElementsByClassName("error-message");
+        var letters = /^[A-Za-z]+$/;
+        if (lname == "" || lname.match(letters)) {
+            text = "";
+            message[1].innerHTML = text;
+            return true;
+        }
+
+        else {
+            text = "Last name should contain only letters";
+            message[1].innerHTML = text;
+            return false;
+        }
+    }
+
+    /*email address input validation*/
+    function Email(email) {
+        var message = document.getElementsByClassName("error-message");
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var atpos = email.indexOf("@");
+        var dotpos = email.lastIndexOf(".");
+
+        if (email == "" || email.match(mailformat) || atpos > 1 && (dotpos - atpos > 2)) {
+            text = "";
+            message[2].innerHTML = text;
+            return true;
+        }
+
+        else {
+            text = "Wrong email format";
+            message[2].innerHTML = text;
+            return false;
+        }
+    }
+
+    /*phone number validation*/
+    function PhoneNumber(pnumber) {
+        var message = document.getElementsByClassName("error-message");
+        var numbers = /^[0-9]+$/;
+        if (pnumber == "" || pnumber.match(numbers)) {
+            text = "";
+            message[3].innerHTML = text;
+            return true;
+        }
+
+        else {
+            text = "Phone number should contain only numbers";
+            message[3].innerHTML = text;
+            return false;
+        }
+    }
+
+
+    /*country input validation*/
+    function Country(country) {
+        var message = document.getElementsByClassName("error-message");
+        var letters = /^[A-Za-z]+$/;
+        if (country == "" || country.match(letters)) {
+            text = "";
+            message[4].innerHTML = text;
+            return true;
+        }
+
+        else {
+            text = "Country name should contain only letters";
+            message[4].innerHTML = text;
+            return false;
+        }
+    }
+
+    /*validate password*/
+    function Password(password) {
+        var message = document.getElementsByClassName("error-message");
+        var illegalChars = /[\W_]/; // allow only letters and numbers
+        if (illegalChars.test(password)) {
+            text = "Password contains illegal characters";
+            message[5].innerHTML = text;
+            return false;
+        }
+        else if ((password.search(/[0-9]+/) == -1)) {
+            text = "Password should contain at least one number";
+            message[5].innerHTML = text;
+            return false;
+        }
+        else {
+            text = "";
+            message[5].innerHTML = text;
+            return true;
+        }
+    }
+
+</script>
+
+</html>
