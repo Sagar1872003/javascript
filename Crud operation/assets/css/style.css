@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    max-width:1140px;
+    margin:0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image:url("after-the-rain-8311416.jpg");
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:#eee601;
+    font-size: 24px;
+    font-weight: bold;
+}
+.add{
+    width: 20%;
+    align-self: flex-end;
+}

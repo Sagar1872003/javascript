@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud operation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="readAll()">
+    <section>
+        <div class="container">
+            <div class="row">
+                
+                <div class="form">
+                    <form>
+                        <div class="create-form" style="display: none;">
+                            <input type="text" class="id" hidden>
+                            <input type="text" placeholder="Enter your name" class="name">
+                            <input type="email" placeholder="Enter your E-mail" class="email">
+                            <input type="button" value="Create" onclick="add()">
+                        </div>
+                        <div class="update-form" style="display: none;">
+                            <input type="text" class="id" hidden>
+                            <input type="text" placeholder="Enter your name" class="uname">
+                            <input type="email" placeholder="Enter your E-mail" class="uemail">
+                            <input type="button" value="Update" onclick="update()">
+                        </div>
+                    </form>
+                    <table width="700">
+                        <thead>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                               Action 
+                            </th>
+                        </thead>
+                        <tbody class="data_table">
+                                
+                        </tbody>
+                    </table>
+                </div>
+                <button class="add" onclick="create()">Add Data</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="assets/js/index.js">
+
+    </script>
+</body>
+
+</html>
