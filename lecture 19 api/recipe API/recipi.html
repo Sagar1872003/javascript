@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>product page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .product-grid {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            transition: transform 0.2s;
+            display: flex;
+        }
+
+        .product-grid:hover {
+            transform: scale(1.05);
+        }
+        .product-image{
+            width: 50%;
+        }
+        .product-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            width: 50%;
+            padding: 15px;
+        }
+
+        .product-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-content .ingredients,
+        .product-content .servings,
+        .product-content .instructions {
+            margin-bottom: 10px;
+        }
+
+        .product-content .ingredients span,
+        .product-content .servings span,
+        .product-content .instructions span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div id="product" style="display: flex; flex-wrap: wrap;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let movie = [
+            {
+                title: "Stracciatella (Italian Wedding Soup)",
+                ingredients: "3 1/2 c Chicken broth; homemade|1 lb Fresh spinach; wash/trim/chop|1 Egg|1 c Grated parmesan cheese; --or--|1 c Romano cheese; freshly grated|Salt and pepper; to taste",
+                servings: "4 servings",
+                instructions: "Bring 1 cup of the broth to a boil. Add spinach and cook until softened but still bright green. Remove spinach with a slotted spoon and set aside. Add remaining broth to pot. Bring to a boil. Meanwhile, beat egg lightly with a fork. Beat in 1/4 cup of cheese. When broth boils pour in egg mixture, stirring constantly for a few seconds until it cooks into rags. Add reserved spinach, salt and pepper. Serve immediately, passing remaining cheese. NOTES: Someone asked for this recipe a while back. I believe this soup, known as Stracciatella is synonymous with Italian Wedding Soup, however, I seem to remember from I-don't-know-where that Italian Wedding Soup is the same as this but with the addition of tiny meatballs.",
+                photo: "https://images.pexels.com/photos/20244033/pexels-photo-20244033/free-photo-of-bowl-of-soup.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            },
+            {
+                title: "Italian Wedding Soup",
+                ingredients: "1/2 lb Ground beef|1/2 lb Ground veal|1/4 c Italian seasoned bread crumb|1 Egg|1 tb Parsley|Salt and pepper to taste|4 c Chicken broth|2 c Spinach leaves cut into pieces|1/4 c Grated Pecorino Romano cheese",
+                servings: "1 Serving",
+                instructions: "Combine the ground meat, bread crumbs, egg, parsley, salt and pepper in a bowl. Mix well and form into tiny meatballs. Bake on a cookie sheet for 30 minutes at 350F. Meanwhile, bring broth to a boil and add spinach. Cover and boil for 5 minutes. Add the meatballs to the hot broth, bring to a simmer. Stir in the cheese and serve immediately. Rita in Scottsdale 01/02/92 01:41 am",
+                photo: "https://images.pexels.com/photos/20271261/pexels-photo-20271261/free-photo-of-soup-on-plate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            },
+            {
+                title: "Stracciatella (Italian Wedding Soup)",
+                ingredients: "1 lb Fresh spinach, washed and chopped|1 Egg|1 c Parmesan cheese, * see note|Salt, to taste|Pepper, to taste",
+                servings: "6 Servings",
+                instructions: "Bring 1 cup of the broth to a boil. Add spinach and cook until softened but still bright green. Remove spinach with a slotted spoon and set aside. Add remaining broth to pot. Bring to a boil. Meanwhile, beat egg lightly with a fork. Beat in 1/4 cup of cheese. When broth boils pour in egg mixture, stirring constantly for a few seconds until it cooks into rags. Add reserved spinach, salt and pepper. Serve immediately, passing remaining cheese.",
+                photo: "https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            },
+            {
+                title: "Italian Wedding Soup",
+                ingredients: "2 qt Chicken stock|1 Chopped carrot|1/2 Chopped onion|1 Chopped celery|2 oz Ground meat; (or ground vegieburger can be used)|1 Egg|1 Sprig of chopped parsley",
+                servings: "4 - 6 servings",
+                instructions: "Bring chicken stock to a boil add the choppedcarrot, celery and onion and lower heat. Combine ground meat or vegieburger, egg, and parsley, the consistency of the mixture is kinda loose. Drop in small pieces of the meat mixture, not much larger than a Tablespoon. (making tiny meatballs.) Turn up the heat and bring to a boil, 5 - 7 minutes, it is ready when the little meatballs float to the surface.",
+                photo: "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            }
+
+        ]
+
+        let tbl = "";
+        movie.map((m) => {
+            tbl +=
+                `
+                <div class="product-grid">
+                    <div class="product-image">
+                            <img class="pic-1"
+                                src="${m.photo}">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title">${m.title}</h3>
+                        <div class="ingredients"><span>Ingredients:</span> ${m.ingredients}</div>
+                            <div class="servings"><span>Servings:</span> ${m.servings}</div>
+                            <div class="instructions"><span>Instructions:</span> ${m.instructions}</div>
+                    </div>
+                </div>
+                
+        `
+        });
+
+        document.getElementById("product").innerHTML = tbl;
+
+    </script>
+</body>
+
+</html>
