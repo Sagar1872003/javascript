@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        strong {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            align-items: center;
+            display: flex;
+            height: 70px;
+            justify-content: end;
+            margin: 0 auto;
+            max-width: 1300px;
+            padding: 0 15px;
+            position: relative;
+            width: 100%;
+        }
+
+        .container1 {
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        .container .logo {
+            font-size: 40px;
+            line-height: 20px;
+            padding-right: 15px;
+        }
+
+        .card{
+            width: 23%;
+        }
+        .card_left {
+            width: 100%;
+        }
+
+        .card_left img {
+            width: 100%;
+            height: 400px;
+            /* Maintain aspect ratio */
+        }
+        .card{
+            background:  #f7f5f5;
+        }
+        .card_right {
+            padding: 40px;
+            background: #f7f5f5;
+        }
+
+        .card_right span {
+            text-transform: uppercase;
+            color: #f37d3a;
+            letter-spacing: 1.2px;
+            font-size: 0.7rem;
+        }
+
+        .card_right h3 {
+            font-weight: 500;
+            color: #262626;
+            font-size: 1.25rem;
+        }
+
+        .card_right p {
+            font-size: 156px;
+            color: #4f4f4f;
+            font-weight: 300;
+        }
+
+        .card_right .card_footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .card_right .card_footer .price {
+            color: rgba(38, 38, 38, .59);
+            letter-spacing: 1px;
+            font-size: 1.25rem;
+        }
+
+        .card_right .card_footer .btn {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #fff;
+            background: #f37d3a;
+            font-size: 0.7rem;
+            padding: 10px 20px;
+            border-radius: 30px;
+            letter-spacing: 1.2px;
+            margin-left: 15px;
+        }
+
+        .card_right .card_footer .btn:hover {
+            color: #f37d3a;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+            <strong class="logo"><a href="cart.html"><i class="fas fa-shopping-cart"
+                        style="color: #f37d3a;"></i></a></strong>
+
+        </div>
+
+
+    </header>
+
+    <section>
+        <div class="container1">
+            <div class="row">
+                <div id="product" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <!-- <div class="source">
+	  <a href="https://www.behance.net/gallery/53500361/Daily-UI-Set-One" target="_blank"/>Behance</a>
+</div>
+<div class="container card">
+		<div class="card_left">
+			
+			<img src="http://res.cloudinary.com/dzkfmthai/image/upload/v1498119804/card_img_zghqta.jpg">
+		</div>
+		<div class="card_right">
+			<span>global chair</span>
+			<h3>Eero Aarnio Style Ball Chair</h3>
+			<p>Our Reproduction of the Aarnio Ball Chair comes in a selection of colors and meets the architectural specifications of the original. </p>
+			<div class="card_footer">
+				<span class="price">$890</span>
+				<a href="#" class="btn">
+					Add To Cart
+				</a>
+			</div>
+		</div>
+</div>-->
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        let product = [
+            {
+                id: 1,
+                title: "plain shirt for men",
+                price: "$10.99",
+                image: "assets/img/img1.jpg",
+                quantity: 1
+            },
+            {
+                id: 2,
+                title: "plain shirt for men",
+                price: "$10.00",
+                image: "assets/img/img2.jpg",
+                quantity: 1
+            },
+            {
+                id: 3,
+                title: "checks shirt for men",
+                price: "$15.10",
+                image: "assets/img/img3.jpg",
+                quantity: 1
+            },
+            {
+                id: 4,
+                title: "casual sirt for men",
+                price: "$15.00",
+                image: "assets/img/img4.jpg",
+                quantity: 1
+            },
+            {
+                id: 5,
+                title: "casual pent for men",
+                price: "$19.99",
+                image: "assets/img/img5.jpg",
+                quantity: 1
+            },
+            {
+                id: 6,
+                title: "casual pent for men",
+                price: "$19.99",
+                image: "assets/img/img6.jpg",
+                quantity: 1
+            },
+            {
+                id: 7,
+                title: "formal pent for men",
+                price: "$16.99",
+                image: "assets/img/img7.jpg",
+                quantity: 1
+            },
+            {
+                id: 8,
+                title: "formal pent for men",
+                price: "$15.99",
+                image: "assets/img/img8.jpg",
+                quantity: 1
+            },
+            {
+                id: 9,
+                title: "Women's casual top dress",
+                price: "$20.99",
+                image: "assets/img/img9.jpg",
+                quantity: 1
+            },
+            {
+                id: 10,
+                title: "Women's casual top kurtu",
+                price: "$15.99",
+                image: "assets/img/img10.jpg",
+                quantity: 1
+            },
+            {
+                id: 11,
+                title: "Women's casual top kurtu",
+                price: "$25.99",
+                image: "assets/img/img11.jpg",
+                quantity: 1
+            },
+            {
+                id: 12,
+                title: "Women's casual top t-shirt",
+                price: "$29.99",
+                image: "assets/img/img12.jpg",
+                quantity: 1
+            },
+            {
+                id: 13,
+                title: "formal pent for women's",
+                price: "$20.99",
+                image: "assets/img/img13.jpg",
+                quantity: 1
+            },
+            {
+                id: 14,
+                title: "formal pent for women's",
+                price: "$23.99",
+                image: "assets/img/img14.jpg",
+                quantity: 1
+            },
+            {
+                id: 15,
+                title: "formal pent for women's",
+                price: "$15.99",
+                image: "assets/img/img15.jpg",
+                quantity: 1
+            },
+            {
+                id: 16,
+                title: "formal pent for women's",
+                price: "$13.99",
+                image: "assets/img/img16.jpg",
+                quantity: 1
+            }
+
+        ]
+
+        let tbl = "";
+        product.map((p) => {
+            tbl +=
+                `
+               
+<div class="card" style="margin-bottom:10px;">
+		<div class="card_left">
+			
+			<img src="${p.image}">
+		</div>
+		<div class="card_right">
+			<h3>${p.title}</h3>
+			<p></p>
+			<div class="card_footer">
+				<span class="price">${p.price}</span>
+				<a href="#" class="btn" onclick="addcart(${p.id})">
+					Add To Cart
+				</a>
+			</div>
+		</div>
+</div>
+        `
+        });
+
+        document.getElementById("product").innerHTML = tbl;
+
+        // let cart = [];
+
+        // const addcart = (id) => {
+        //     let c = product.find(item => item.id == id);
+        //     if(c) {
+        //         cart.push(c);
+        //         localStorage.setItem('cart',JSON.stringify(cart));
+        //         alert("cart Add");
+        //     }
+        // }
+
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const addcart = (id) => {
+            let itemInCart = cart.find(item => item.id == id);
+            if (itemInCart) {
+                itemInCart.quantity++;
+            } else {
+                let productToAdd = product.find(item => item.id == id);
+                if (productToAdd) {
+                    cart.push({ ...productToAdd }); // Spread operator to create a new object
+                }
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert("Item added to cart");
+        }
+    </script>
+</body>
+
+</html>
