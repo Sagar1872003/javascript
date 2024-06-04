@@ -310,33 +310,17 @@
 
         document.getElementById("product").innerHTML = tbl;
 
-        // let cart = [];
-
-        // const addcart = (id) => {
-        //     let c = product.find(item => item.id == id);
-        //     if(c) {
-        //         cart.push(c);
-        //         localStorage.setItem('cart',JSON.stringify(cart));
-        //         alert("cart Add");
-        //     }
-        // }
-
-
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cart = [];
 
         const addcart = (id) => {
-            let itemInCart = cart.find(item => item.id == id);
-            if (itemInCart) {
-                itemInCart.quantity++;
-            } else {
-                let productToAdd = product.find(item => item.id == id);
-                if (productToAdd) {
-                    cart.push({ ...productToAdd }); // Spread operator to create a new object
-                }
+            let c = product.find(item => item.id == id);
+            if(c) {
+                cart.push(c);
+                localStorage.setItem('cart',JSON.stringify(cart));
+                alert("cart Add");
             }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert("Item added to cart");
         }
+
     </script>
 </body>
 
